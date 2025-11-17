@@ -1,0 +1,7 @@
+@import "tailwindcss";
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+span {
+  font-family: "Poppins", sans-serif;
+}
