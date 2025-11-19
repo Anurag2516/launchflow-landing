@@ -94,13 +94,13 @@ const Problems = () => {
         {problems.map((problem, index) => (
           <motion.div
             key={index}
-            className="relative flex flex-col items-start justify-start border border-slate-700 bg-slate-800/30 backdrop-blur-sm p-6 md:p-8 rounded-xl hover:border-slate-600 transition-all duration-300 group overflow-hidden"
+            className="relative flex flex-col items-start justify-start border border-slate-700 bg-slate-800/30 backdrop-blur-sm p-6 md:p-8 rounded-xl hover:border-slate-600 hover:bg-slate-800/50 group overflow-hidden"
             variants={cardVariants}
             whileHover={{
               y: -8,
               boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
             }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <motion.div
