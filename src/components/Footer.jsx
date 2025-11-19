@@ -21,6 +21,36 @@ const Footer = () => {
     },
   };
 
+  const footerLinks = {
+    Product: [
+      { name: "Features", href: "#" },
+      { name: "Pricing", href: "#" },
+      { name: "Documentation", href: "#" },
+      { name: "Templates", href: "#" },
+      { name: "Changelog", href: "#" },
+    ],
+    Developers: [
+      { name: "API Reference", href: "#" },
+      { name: "Guides", href: "#" },
+      { name: "SDKs", href: "#" },
+      { name: "Status", href: "#" },
+      { name: "GitHub", href: "#" },
+    ],
+    Company: [
+      { name: "About", href: "#" },
+      { name: "Careers", href: "#" },
+      { name: "Blog", href: "#" },
+      { name: "Press", href: "#" },
+      { name: "Contact", href: "#" },
+    ],
+    Legal: [
+      { name: "Terms of Service", href: "#" },
+      { name: "Privacy Policy", href: "#" },
+      { name: "Security", href: "#" },
+      { name: "Cookie Policy", href: "#" },
+    ],
+  };
+
   return (
     <>
       <motion.div
@@ -71,6 +101,46 @@ const Footer = () => {
           </motion.div>
         </div>
       </motion.div>
+
+      <footer className="bg-slate-900/50 border-t border-slate-800 py-12 md:py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 mb-12">
+            <div className="col-span-2 md:col-span-3 lg:col-span-1">
+              <h3 className="text-2xl font-bold text-slate-50 mb-3">
+                LaunchFlow
+              </h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                The platform for building, deploying, and scaling products —
+                without backend complexity.
+              </p>
+            </div>
+
+            {Object.entries(footerLinks).map(([category, links]) => (
+              <div key={category}>
+                <h4 className="text-slate-50 font-semibold mb-4">{category}</h4>
+                <ul className="space-y-2.5">
+                  {links.map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={link.href}
+                        className="text-slate-400 text-sm hover:text-slate-50 transition-colors duration-200"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-center items-center gap-4">
+            <p className="text-slate-400 text-sm">
+              © 2025 LaunchFlow. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
