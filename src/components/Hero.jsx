@@ -43,7 +43,7 @@ const Hero = () => {
           variants={itemVariants}
         >
           Launch products{" "}
-          <span className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
             10×
           </span>{" "}
           faster — without backend complexity
@@ -63,7 +63,7 @@ const Hero = () => {
         >
           <motion.button
             type="button"
-            className="bg-gradient-to-r from-indigo-500 to-purple-500 text-base md:text-lg text-white font-semibold px-6 py-3 rounded-lg relative overflow-hidden"
+            className="bg-linear-to-r from-indigo-500 to-purple-500 text-base md:text-lg text-white font-semibold cursor-pointer px-6 py-3 rounded-lg relative overflow-hidden"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 0 25px rgba(147, 51, 234, 0.6)",
@@ -76,7 +76,7 @@ const Hero = () => {
 
           <motion.button
             type="button"
-            className="bg-slate-700 border border-slate-300 text-white text-base md:text-lg font-semibold px-6 py-3 rounded-lg"
+            className="bg-slate-700 border border-slate-300 text-white text-base cursor-pointer md:text-lg font-semibold px-6 py-3 rounded-lg"
             whileHover={{
               scale: 1.05,
               borderColor: "rgba(226, 232, 240, 0.5)",
