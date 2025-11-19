@@ -53,7 +53,7 @@ const Problems = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-10 py-16 md:py-28 px-6">
+    <div className="flex flex-col items-center gap-10 py-28 px-6">
       <motion.div
         className="flex flex-col items-center max-w-3xl"
         initial="hidden"
