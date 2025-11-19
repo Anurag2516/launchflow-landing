@@ -181,7 +181,7 @@ const Pricing = () => {
                 }`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                transition={{ duration: 0.3 }}
               >
                 {plan.cta}
               </motion.button>
